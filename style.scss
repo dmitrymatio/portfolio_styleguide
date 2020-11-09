@@ -1,0 +1,514 @@
+// Sass Variables //
+
+// colors
+$grey : #f7f7f7;
+$grey1 : #ccc;
+$grey2 : #666666;
+$grey3 : #232323;
+
+$sky : #0891EB;
+$grapefruit : #FF4164;
+
+$tangerine : #FFB90B;
+$apple : #9BD107;
+$red : red;
+
+// Colors for SG
+
+.color1 {
+  background: #0891EB;
+}
+
+.color2 {
+  background: #FF4164;
+}
+
+.color3 {
+  background: #9BD107;
+}
+
+.color4 {
+  background: #FFB90B;
+}
+
+.color5 {
+  background: #A446DB;
+}
+
+.color6 {
+  background: #ffffff;
+}
+
+.color7 {
+  background: $grey1;
+}
+
+.color8 {
+  background: $grey2;
+}
+
+.color9 {
+  background: $grey3;
+}
+
+
+
+// Base Reset Styles
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  color: black;
+}
+
+h3 {
+  font-size: 1.7rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: black;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.6;
+  color: $grey3;
+}
+
+a {
+  color: $sky;
+  transition: .3s;
+  cursor: pointer;
+
+  &:active,
+  &:hover,
+  &:visited {
+    color: $sky;
+  }
+}
+
+
+// Wrappers
+
+%clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+.sg-wrapper {
+  @extend %clearfix;
+}
+
+.main-wrapper {
+  width: 70%;
+  max-width: 800px;
+  margin: 0 auto;
+  @extend %clearfix;
+}
+
+//////////////////////////////
+
+
+
+// Header
+
+.sg-header {
+  padding: 1.5rem;
+  background: white;
+  border-bottom: 2px solid $grey;
+  margin-bottom: 2rem;
+}
+
+.sg-logo {
+  font: 300 1.6rem/1.1 Helvetica;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
+  color: $grey1;
+  transition: .4s;
+  cursor: pointer;
+
+  &:hover {
+    color: $sky;
+  }
+}
+
+
+
+///////////////////////////////////////////
+// Sidebar Navigation ///////////////////
+///////////////////////////////////////
+
+.sg-sidebar {
+  position: fixed;
+  float: left;
+  background: white;
+  width: 300px;
+  height: 100%;
+  box-shadow: 2px 0px 0px 0px rgba(black, .05);
+}
+
+
+.sg-nav-group {
+  padding-bottom: 1rem;
+}
+
+.sg-nav-header {
+  color: $grey1;
+  padding-left: 1.5rem;
+  font: bold .9rem/2 Helvetica;
+  text-transform: uppercase;
+}
+
+.sg-nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: block;
+    padding: .6rem 3.5rem;
+    font: 400 .9rem/1 Helvetica;
+    border-left: 5px solid transparent;
+    text-decoration: none;
+    color: $grey2;
+
+    &:hover {
+      background: $grey;
+      border-left: 5px solid $sky;
+      transition: .2s;
+    }
+  }
+}
+
+
+///////////////////////////////////////////
+// Main Content /////////////////////////
+///////////////////////////////////////
+
+.sg-main {
+  float: right;
+  background: $grey;
+  width: 100%;
+  padding-left: 300px;
+}
+
+
+.sg-main-header {
+  padding: 9.5rem 0 2.5rem;
+  background: $sky;
+  margin-bottom: 4rem;
+  margin-top: 7rem;
+
+  h2 {
+    color: white;
+    letter-spacing: .05rem;
+    font: 300 3rem/1 Helvetica;
+  }
+}
+
+.sg-main-header.first {
+  margin-top: 0;
+}
+
+.sg-section {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 2px solid rgba(black, .05);
+  @extend %clearfix;
+
+  &.last {
+    border: none;
+  }
+}
+
+
+///////////////////// Colors //////////////////////////
+
+
+.sg-color {
+  height: 150px;
+  margin: 1.5rem 0 1rem;
+}
+
+.sg-colorName {
+  margin: 0;
+}
+
+//////////////// Typography /////////////////////////
+
+.h1 {
+  font: 300 3rem/1 Helvetica;
+  padding-bottom: 10px;
+}
+
+.h2 {
+  font: 300 1.75rem/1.25 Helvetica;
+}
+
+.h3 {
+  font: bold 1.1rem/3 Helvetica;
+}
+
+.h4 {
+  font: bold .9rem/1 Helvetica;
+  text-transform: uppercase;
+
+  &.light {
+    color: $grey2;
+  }
+}
+
+.large-body {
+  font: 300 1.3rem/1.4 Helvetica;
+}
+
+.small-body {
+  font: 300 .8rem/1.4 Helvetica;
+}
+
+
+
+/// Block Quote ///
+
+blockquote {
+  margin: 0 0 1rem 2rem;
+  padding: 0 2rem;
+  font: 300 1.3rem/1.4 Helvetica;
+  border-left: 3px solid #dedede;
+  color: $grey3;
+}
+
+
+// Lists //
+
+ol,
+ul {
+  font: 300 1rem/1.6 Helvetica;
+  margin-left: 0;
+  padding-left: 20px;
+
+  li {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+// tables
+
+table {
+  width: 100%;
+  max-width: 600px;
+  text-align: left;
+  font: 300 1rem/2.5 Helvetica;
+
+  thead {
+    border-bottom: 3px solid lighten($grey1, 10);
+  }
+
+  tr {
+    border-bottom: 1px solid lighten($grey1, 10);
+  }
+
+  caption {
+    text-align: left;
+    font: 300 .9rem/2.5 Helvetica;
+    color: darken($grey1, 20);
+  }
+}
+
+////// Buttons ///////
+
+a[class^="button"] {
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+}
+
+
+.button-sm {
+  padding: .75rem 1.5rem;
+  text-align: center;
+  color: $grapefruit;
+  border-radius: 5px;
+  border: 2px solid $grapefruit;
+  font: 400 .8rem/1 Helvetica;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: $grapefruit;
+    color: white;
+  }
+}
+
+.button-md {
+  padding: 1rem 2rem;
+  text-align: center;
+  color: $grapefruit;
+  border-radius: 5px;
+  border: 2px solid $grapefruit;
+  font: 400 1rem/1 Helvetica;
+
+  &:hover {
+    background-color: $grapefruit;
+    color: white;
+  }
+}
+
+.button-lg {
+  padding: 1rem 3rem;
+  text-align: center;
+  color: $grapefruit;
+  border-radius: 5px;
+  border: 2px solid $grapefruit;
+  font: 400 1.25rem/1 Helvetica;
+
+  &:hover {
+    background-color: $grapefruit;
+    color: white;
+  }
+}
+
+/// Images ////
+
+img {
+  height: 200px;
+  width: 200px;
+  margin-right: 2rem;
+  display: block;
+
+  &.sg-avatar {
+    border-radius: 50%;
+  }
+
+  &.sg-wide {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+  }
+}
+
+///// Notifications ///////
+
+div[class^="notification"] {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+}
+
+.notification {
+  background: lighten($tangerine, 32%);
+  border-left: 5px solid $tangerine;
+}
+
+.notification-success {
+  background: lighten($apple, 40%);
+  border-left: 5px solid $apple;
+}
+
+.notification-failure {
+  background: lighten($red, 42%);
+  border-left: 5px solid $red;
+}
+
+
+
+//// Forms /////
+
+.input {
+  padding: 10px;
+  font: 300 1rem/1.4 Helvetica;
+  border-radius: 5px;
+  border: 1px solid $grey1;
+  width: 400px;
+  margin-bottom: 1rem;
+}
+
+/// Tool Tip ////
+
+.tip {
+  position: relative;
+}
+
+.tip:hover:after {
+  content: attr(data-tip);
+  color: #fff;
+  font: 300 .8rem/1.4 Helvetica;
+  text-align: left;
+  background-color: $grey2;
+  border-radius: 0.3334rem;
+  padding: 0.6667rem;
+  width: 16.5rem;
+  opacity: 0.9;
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+  z-index: 98;
+}
+
+.tip:hover:before {
+  content: "";
+  border: solid;
+  border-color: $grey2 transparent;
+  border-width: 0.5rem 0.5rem 0 0.5rem;
+  /* 6px 6px 0 6px */
+  opacity: 0.9;
+  display: block;
+  left: 1rem;
+  bottom: 1.5rem;
+  position: absolute;
+  z-index: 99;
+}
+
+
+
+
+
+
+// JS toggle Classes
+
+.js-nav-toggle {
+  display: none;
+  float: right;
+  color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: .5rem;
+}
+
+/// Helper Classes
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-sm {
+  margin-bottom: 2rem;
+}
+
+
+//// Details and Summary ////
+
+summary {
+  outline: none;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+
+/// Layout ////
+
+.l-33 {
+  width: 33%;
+  padding-right: 4%;
+  float: left;
+}
